@@ -127,7 +127,7 @@
             font-size: 13px;
             line-height: 16px;
             text-align: center;
-            margin-top: 24px;
+            margin-top: 27px;
             margin-bottom: 0;
         }
 
@@ -141,22 +141,31 @@
             line-height: 16px;
             text-align: center;
             margin-top: 15px;
+            padding: 11px 9px;
         }
 
         .social-buttons {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 4px;
             margin-top: 15px;
         }
 
-        .social-buttons button {
+        .google-btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 9px;
             width: 100%;
-            padding: 12px 0;
+            padding: 10px 10px;
+        }
+        .facebook-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            width: 100%;
+            padding: 11px 9px;
         }
 
         .social-buttons button img {
@@ -195,10 +204,11 @@
             <input type="password" placeholder="Password" id="password-field">
             <span class="password-control" onclick="togglePassword()"></span>
         </div>
-        <input style="margin-bottom: 0" type="password" required name="confirm_password" placeholder="Confirm Password"/>
+        <input style="margin-bottom: 0" type="password" required name="confirm_password"
+               placeholder="Confirm Password"/>
 
 
-        <button style="background: #46A358; color: #fff;">Register</button>
+        <button style="background: #46A358; color: #fff; margin-bottom: 36px">Register</button>
         <div class="divider"> Or register with</div>
 
 
