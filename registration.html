@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 1.2;
+            margin-bottom: 40px;
+
+
+        }
+
+        p {
+            align-self: flex-start;
+        }
+
+        input, textarea {
+
+            width: 300px;
+            height: 40px;
+            margin-bottom: 16px;
+            padding: 12px 14px;
+            /*font-family: Cera Pro;*/
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            border: 1px solid #EAEAEA;
+            border-radius: 5px;
+
+            &::placeholder {
+                color: #A5A5A5;
+            }
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        button {
+            width: 300px;
+            height: 45px;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 16px;
+            border: none;
+            margin-bottom: 30px;
+            margin-top: 41px;
+        }
+
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+            margin-top: 14px;
+        }
+
+        .password {
+            position: relative;
+        }
+
+        .password {
+            position: relative;
+        }
+
+        .password-control {
+            position: absolute;
+            top: 11px;
+            right: 6px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            background: url("https://snipp.ru/demo/495/no-view.svg") no-repeat center;
+        }
+
+        .password-control.view {
+            background: url("https://snipp.ru/demo/495/view.svg") no-repeat center;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #3D3D3D;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 16px;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px solid #EAEAEA;
+        }
+
+        .divider::before {
+            margin-right: 10px;
+        }
+
+        .divider::after {
+            margin-left: 10px;
+        }
+
+        .google-btn {
+            color: #727272;
+            border: 1px solid #EAEAEA;
+            border-radius: 5px;
+            background: none;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 16px;
+            text-align: center;
+            margin-top: 27px;
+            margin-bottom: 0;
+        }
+
+        .facebook-btn {
+            color: #727272;
+            border: 1px solid #EAEAEA;
+            border-radius: 5px;
+            background: none;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 16px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .social-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .social-buttons button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 12px 0;
+        }
+
+        .social-buttons button img {
+            width: 20px;
+            height: 20px;
+        }
+
+    </style>
+</head>
+<script>
+    function togglePassword() {
+        const input = document.getElementById('password-field');
+        const icon = document.querySelector('.password-control');
+
+        if (input.type === 'password') {
+            input.type = 'text';
+            icon.classList.add('view');
+        } else {
+            input.type = 'password';
+            icon.classList.remove('view');
+        }
+    }
+</script>
+<body>
+<section>
+    <h1>
+        <span style="color:#3D3D3D">Login</span>
+        <span>|</span>
+        <span style="color:#46A358">Register</span>
+
+    </h1>
+    <p style="color:#3D3D3D">Enter your email and password to register.</p>
+    <form>
+        <input type="text" required name="username" placeholder="Username" autocomplete="off">
+        <input type="email" required name="email" placeholder="Enter your email address" autocomplete="off"/>
+        <div class="password">
+            <input type="password" placeholder="Password" id="password-field">
+            <span class="password-control" onclick="togglePassword()"></span>
+        </div>
+        <input type="password" required name="confirm_password" placeholder="Confirm Password"/>
+
+        <button style="background: #46A358; color: #fff;">Register</button>
+        <div class="divider"> Or register with</div>
+
+        <div class="social-buttons">
+            <button class="google-btn">
+
+                <img src="https://images.icon-icons.com/2699/PNG/96/google_logo_icon_169090.png" alt="google">
+                Continue with Google
+            </button>
+
+            <button class="facebook-btn">
+                <img src="https://images.icon-icons.com/1488/PNG/96/5293-facebook_102565.png" alt="facebook">
+                Continue with Facebook
+            </button>
+        </div>
+    </form>
+</section>
+
+</body>
+</html>
