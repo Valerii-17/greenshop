@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn {
+    color: white;
+    background: #46A358;
+    border-radius: 6px;
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 16px 7px;
+}
+
+.btn-large {
+    margin-top: 44px;
+    width: 140px;
+    padding: 11px 25px 9px;
+}
+
+.section-1 {
+    /*font-size: 0;*/
+    background: linear-gradient(97.77deg, rgba(245, 245, 245, 0.5) -23.46%, rgba(245, 245, 245, 0.5) 107.51%);
+
+
+    .left-side {
+        padding: 68px 43px;
+        /*vertical-align: middle;*/
+        display: inline-block;
+        max-width: 673px;
+    }
+
+    .right-side {
+        vertical-align: top;
+        display: inline-block;
+        position: relative;
+
+        .large-img {
+            height: 450px;
+
+        }
+
+        .small-img {
+            height: 135px;
+            position: absolute;
+            left: 55px;
+            bottom: 17px;
+        }
+    }
+
+    h3 {
+        /* font-family: Cera Pro;*/
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        color: #3D3D3D;
+        margin-bottom: 7px;
+    }
+
+    h1 {
+        /*font-family: Cera Pro;*/
+        font-weight: 900;
+        font-size: 70px;
+        line-height: 70px;
+        text-transform: uppercase;
+        color: #3D3D3D;
+        margin-bottom: 5px;
+
+        span {
+            color: #46A358;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: #727272;
+        }
+    }
+
+}
+
+
+.section-2 {
+    height: 54px;
+    border-bottom: solid 0.3px;
+    border-color: #46A35880;
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+.logo {
+    width: 150px;
+    padding-bottom: 17px;
+}
+
+.login-btn {
+    color: white;
+    background: #46A358;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    padding: 8px 17px 7px 41px;
+
+}
+
+.logout {
+    position: absolute;
+    color: black;
+    right: 90px;
+    top: 15px;
+}
+
+.menu {
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: #3D3D3D;
+
+}
+
+.nav {
+
+    display: flex;
+    gap: 50px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #3D3D3D;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
