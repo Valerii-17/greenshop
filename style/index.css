@@ -231,7 +231,9 @@ body {
 
 .categories-title {
     font-weight: 700;
-    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 16px;
+    padding: 14px 18px;
 }
 
 .categories-list {
@@ -241,7 +243,10 @@ body {
 }
 
 .categories-list li {
-    margin-bottom: 12px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 40px;
+    padding-left: 30px;
 }
 
 
