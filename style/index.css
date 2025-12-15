@@ -169,9 +169,11 @@ body {
 }
 
 .aside {
+    position: relative;
     list-style: none;
     float: left;
     max-width: 310px;
+    min-height: 1200px;
 }
 
 .products {
@@ -186,15 +188,17 @@ body {
 }
 
 .products-list {
+
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin-top: 31px;
 }
 
 .products-list li {
     float: left;
     width: 250px;
-    margin: 0 30px 40px 0;
+    height: 350px;
+    margin: 0 30px 70px 0;
 }
 
 .products-list img {
@@ -205,11 +209,12 @@ body {
 
 
 .sale {
-    align-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     font-weight: 700;
     font-size: 23px;
     line-height: 16px;
-    margin-top: 370px;
     width: 310px;
     height: 470px;
     text-align: center;
@@ -217,14 +222,17 @@ body {
 
 
     img {
-        padding: 0 22px;
         display: block;
+        margin: 0 auto;
+    }
+
+    img:first-child {
+        margin-top: 16px;
     }
 
     img:last-child {
         margin-top: 6px;
         max-height: 320px;
-        object-fit: contain;
     }
 }
 
@@ -249,20 +257,84 @@ body {
     padding-left: 30px;
 }
 
-
-.products-filter span {
-    margin-right: 30px;
-    cursor: pointer;
+.products-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.filter-menu {
+    display: flex;
+}
+
+.filter-menu span {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 16px;
+    margin-right: 40px;
+    cursor: pointer;
+    color: #3D3D3D;
+}
+
+.filter-menu span:last-child {
+    margin-right: 0;
+}
+
+.filter-sort {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+
+
+    span {
+        margin-right: 8px;
+    }
+
+    .sort-value {
+        margin-right: 0;
+    }
+
+    img {
+        margin-left: 2px;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+    }
+}
 
 .product-price {
     color: #46A358;
 }
 
+.filter-menu .active {
+    color: #46A358;
+    font-weight: 700;
+    position: relative;
+}
 
+.filter-menu .active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 100%;
+    height: 2px;
+    background: #46A358;
+}
 
+.categories-list li {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 40px;
+    padding-left: 30px;
+    cursor: pointer;
+}
 
+.categories-list li.active {
+    color: #46A358;
+    font-weight: 700;
+    /*padding-left: 20px; */
+}
 
 
 
