@@ -494,6 +494,6 @@ body {
     color: #3D3D3D;
 }
 
-a:hover {
+.blog-list a:hover{
     color: #46A358;
 }
