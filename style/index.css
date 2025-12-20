@@ -180,9 +180,10 @@ body {
     cursor: pointer;
 }
 
-.categories-list li.active {
+.categories-list li:hover {
     color: #46A358;
     font-weight: 700;
+
 }
 
 .banner {
