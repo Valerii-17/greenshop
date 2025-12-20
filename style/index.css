@@ -151,7 +151,7 @@ body {
 
 .section-3::after {
     content: "";
-    display: block;
+    display: flex;
     clear: both;
 }
 
@@ -262,6 +262,50 @@ body {
     margin-right: auto;
 }
 
+.products-list li:hover .wrap-btn {
+    display: flex;
+}
+
+
+.wrapper {
+    background: #fff;
+    position: relative;
+    height: 300px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.wrap-btn {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    left: 0;
+    bottom: 8px;
+}
+
+.wrap-btn button {
+    background: white;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border: none;
+    overflow: hidden;
+}
+
+.wrap-btn img {
+    max-width: 20px;
+    max-height: 20px;
+}
+
+
 .products-list p {
     margin-top: 31px;
     font-size: 16px;
@@ -275,13 +319,15 @@ body {
     float: left;
     width: 250px;
     height: 350px;
-    margin: 0 30px 70px 0;
+    margin: 0 15px 70px 15px;
+    justify-content: center;
 }
 
 .products-list img {
     width: 250px;
     height: 250px;
     object-fit: contain;
+    justify-content: center
 }
 
 .product-price {
@@ -293,7 +339,7 @@ body {
 
 .products::after {
     content: "";
-    display: block;
+    display: flex;
     clear: both;
 }
 
@@ -494,6 +540,6 @@ body {
     color: #3D3D3D;
 }
 
-.blog-list a:hover{
+.blog-list a:hover {
     color: #46A358;
 }
