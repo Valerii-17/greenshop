@@ -156,6 +156,7 @@ body {
 }
 
 .aside {
+    background: #FBFBFB;
     float: left;
     max-width: 310px;
     height: 1217px;
@@ -269,7 +270,7 @@ body {
 
 
 .wrapper {
-    background: #fff;
+    background: #FBFBFB;
     position: relative;
     height: 300px;
     padding: 10px;
@@ -302,6 +303,7 @@ body {
 }
 
 .wrap-btn img {
+    background: white;
     max-width: 20px;
     max-height: 20px;
 }
@@ -325,6 +327,7 @@ body {
 }
 
 .products-list img {
+    background: #FBFBFB;
     width: 250px;
     height: 250px;
     object-fit: contain;
