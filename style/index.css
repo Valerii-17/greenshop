@@ -266,45 +266,48 @@ body {
 
 .products-list li:hover .wrap-btn {
     display: flex;
+    opacity: 1;
 }
 
 
 .wrapper {
     position: relative;
-    height: 350px;
+    height: 300px;
+    width: 260px;
     padding: 10px;
     justify-content: center;
     align-items: center;
-
+    background: #FBFBFB;
 }
 
 .wrap-btn {
     position: absolute;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    gap: 10px;
+    gap: 25px;
     left: 0;
-    bottom: 10px;
+    bottom: 7px;
+    opacity: 0;
+    transition:0.3s ease;
 }
 
 .wrap-btn button {
-    background: white;
+    background: #fff;
     border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 35px;
-    max-height: 35px;
+    width: 35px;
+    height: 35px;
     border: none;
-    overflow: hidden;
 }
 
 .wrap-btn img {
     background: white;
-    max-width: 20px;
-    max-height: 20px;
+    max-width: 18px;
+    max-height: 18px;
 }
 
 
@@ -315,6 +318,7 @@ body {
     color: #3D3D3D;
     font-weight: 400;
     margin-bottom: 6px;
+    padding-top: 12px;
 }
 
 .products-list li {
@@ -326,7 +330,7 @@ body {
 }
 
 .products-list img {
-    /*background: #FBFBFB;*/
+    background: #FBFBFB;
     width: 250px;
     height: 250px;
     object-fit: contain;
