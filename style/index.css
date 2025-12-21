@@ -270,9 +270,8 @@ body {
 
 
 .wrapper {
-    background: #FBFBFB;
     position: relative;
-    height: 300px;
+    height: 350px;
     padding: 10px;
     justify-content: center;
     align-items: center;
@@ -287,7 +286,7 @@ body {
     width: 100%;
     gap: 10px;
     left: 0;
-    bottom: 8px;
+    bottom: 10px;
 }
 
 .wrap-btn button {
@@ -296,8 +295,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 35px;
-    height: 35px;
+    max-width: 35px;
+    max-height: 35px;
     border: none;
     overflow: hidden;
 }
@@ -310,7 +309,7 @@ body {
 
 
 .products-list p {
-    margin-top: 31px;
+    margin-top: 36px;
     font-size: 16px;
     line-height: 16px;
     color: #3D3D3D;
@@ -327,7 +326,7 @@ body {
 }
 
 .products-list img {
-    background: #FBFBFB;
+    /*background: #FBFBFB;*/
     width: 250px;
     height: 250px;
     object-fit: contain;
