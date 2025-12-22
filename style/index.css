@@ -52,17 +52,76 @@ body {
 }
 
 .nav {
+    align-items: center;
     display: flex;
-    gap: 50px;
     margin-right: 125px;
+    list-style: none;
+    text-decoration: none;
+    color: #3D3D3D;
+}
+
+.nav-link li {
+    position: relative;
 }
 
 .nav-link {
-    text-decoration: none;
-    color: #3D3D3D;
+    list-style: none;
+    gap: 50px;
+    align-items: center;
+    display: flex;
     font-weight: 500;
     font-size: 16px;
 }
+
+.nav-link > li > .sub-menu {
+    position: absolute;
+    display: none;
+    background: #EDF6EE;
+    padding: 7px 0 8px 14px;
+}
+
+.nav-link > li:hover > .sub-menu {
+    display: block;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.sub-menu {
+    position: relative;
+}
+
+.sub-menu-right{
+    position: absolute;
+    display: none;
+    background: #EDF6EE;
+    left: 100%;
+    top: 0;
+    padding: 7px 0 8px 14px;
+}
+.r-menu:hover > .sub-menu-right
+{
+    display: block;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: #3D3D3D;
+    display: block;
+    white-space: nowrap;
+}
+
+.nav-link ul {
+    width: 180px;
+    color: #3D3D3D;
+    font-weight: 400;
+    font-size: 16px;
+
+    list-style: none;
+    text-decoration: none;
+}
+
+
+
 
 .login-btn {
     display: flex;
@@ -290,7 +349,7 @@ body {
     left: 0;
     bottom: 7px;
     opacity: 0;
-    transition:0.3s ease;
+    transition: 0.3s ease;
 }
 
 .wrap-btn button {
