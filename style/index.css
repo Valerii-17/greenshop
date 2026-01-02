@@ -51,10 +51,24 @@ body {
     padding-bottom: 17px;
 }
 
+.header-icons{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    margin-right:25px;
+}
+
+.header-icon{
+    width:29px;
+    height:24px;
+    display:block;
+}
+
 .nav {
     align-items: center;
     display: flex;
-    margin-right: 125px;
+    margin-right: auto;
+    margin-left: 229px;
     list-style: none;
     text-decoration: none;
     color: #3D3D3D;
