@@ -334,6 +334,83 @@ body {
     cursor: pointer;
 }
 
+
+.filter-block{
+    margin-left: 18px;
+    margin-top: 36px;
+    width: 226px;
+}
+.size-block{
+    margin-left: 18px;
+    margin-top: 46px;
+    margin-right: 24px;
+}
+
+.filter-title{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 16px;
+    color:#3D3D3D;
+    margin-bottom: 15px;
+}
+
+
+.price-range{
+    width: 100%;
+    accent-color: #46A358;
+    margin-bottom: 15px;
+}
+
+.price-text{
+    font-size: 15px;
+    line-height: 16px;
+    color:#3D3D3D;
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+.price-text span{
+    color:#46A358;
+    font-weight: 700;
+}
+
+
+.filter-btn{
+    /*margin-top: 16px;*/
+    margin-left: 12px;
+    width: 90px;
+    height: 35px;
+    background:#46A358;
+    color:#fff;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor:pointer;
+}
+
+
+.size-list{
+    list-style:none;
+    padding-left:10px;
+    margin:0;
+}
+
+.size-list li{
+    display:flex;
+    justify-content: space-between;
+    font-size: 15px;
+    line-height: 40px;
+    color:#3D3D3D;
+    cursor:pointer;
+}
+
+.size-list li:hover{
+    color:#46A358;
+    font-weight:700;
+}
+
+
+
 .filter-menu .active {
     color: #46A358;
     font-weight: 700;
