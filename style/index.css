@@ -52,17 +52,17 @@ body {
     padding-bottom: 17px;
 }
 
-.header-icons{
-    display:flex;
-    align-items:center;
-    gap:25px;
-    margin-right:25px;
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-right: 25px;
 }
 
-.header-icon{
-    width:29px;
-    height:24px;
-    display:block;
+.header-icon {
+    width: 29px;
+    height: 24px;
+    display: block;
 }
 
 .nav {
@@ -155,6 +155,32 @@ body {
     font-weight: 700;
     background: #1A712A;
 
+}
+
+.nav-link > li:hover > a {
+    font-weight: 700;
+}
+
+.nav-link > li > a {
+    position: relative;
+    display: block;
+    padding-bottom: 36px;
+}
+
+.nav-link > li > a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background: #46A358;
+    opacity: 0;
+    transition: opacity .2s ease;
+}
+
+.nav-link > li:hover > a::after {
+    opacity: 1;
 }
 
 
@@ -324,111 +350,120 @@ body {
     align-items: center;
 }
 
+
 .filter-menu {
     display: flex;
+    gap: 40px;
 }
 
 .filter-menu span {
-    margin-right: 40px;
+    position: relative;
+    cursor: pointer;
     font-size: 15px;
     line-height: 16px;
     font-weight: 400;
     color: #3D3D3D;
-    cursor: pointer;
+    padding-bottom: 7px;
+}
+
+.filter-menu span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: #46A358;
+    opacity: 0;
+    transition: opacity .2s ease;
 }
 
 
-.filter-block{
+.filter-menu span:hover {
+    color: #46A358;
+    font-weight: 700;
+}
+
+.filter-menu span:hover::after {
+    opacity: 1;
+}
+
+
+.filter-block {
     margin-left: 18px;
     margin-top: 36px;
     width: 226px;
 }
-.size-block{
+
+.size-block {
     margin-left: 18px;
     margin-top: 46px;
     margin-right: 24px;
 }
 
-.filter-title{
+.filter-title {
     font-weight: 700;
     font-size: 18px;
     line-height: 16px;
-    color:#3D3D3D;
+    color: #3D3D3D;
     margin-bottom: 15px;
 }
 
 
-.price-range{
+.price-range {
     width: 100%;
     accent-color: #46A358;
     margin-bottom: 15px;
 }
 
-.price-text{
+.price-text {
     font-size: 15px;
     line-height: 16px;
-    color:#3D3D3D;
+    color: #3D3D3D;
     margin-bottom: 15px;
     padding-left: 10px;
 }
 
-.price-text span{
-    color:#46A358;
+.price-text span {
+    color: #46A358;
     font-weight: 700;
 }
 
 
-.filter-btn{
+.filter-btn {
     /*margin-top: 16px;*/
     margin-left: 12px;
     width: 90px;
     height: 35px;
-    background:#46A358;
-    color:#fff;
+    background: #46A358;
+    color: #fff;
     border-radius: 6px;
     font-weight: 700;
     font-size: 16px;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 
-.size-list{
-    list-style:none;
-    padding-left:10px;
-    margin:0;
+.size-list {
+    list-style: none;
+    padding-left: 10px;
+    margin: 0;
 }
 
-.size-list li{
-    display:flex;
+.size-list li {
+    display: flex;
     justify-content: space-between;
     font-size: 15px;
     line-height: 40px;
-    color:#3D3D3D;
-    cursor:pointer;
+    color: #3D3D3D;
+    cursor: pointer;
 }
 
-.size-list li:hover{
-    color:#46A358;
-    font-weight:700;
-}
-
-
-
-.filter-menu .active {
+.size-list li:hover {
     color: #46A358;
     font-weight: 700;
-    position: relative;
 }
 
-.filter-menu .active::after {
-    content: "";
-    position: absolute;
-    bottom: -7px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: #46A358;
-}
 
 .filter-sort {
     display: flex;
@@ -452,7 +487,10 @@ body {
 .products-list {
     list-style: none;
     margin-top: 31px;
-    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 70px;
 }
 
 .products-list li:hover .wrap-btn {
@@ -460,6 +498,30 @@ body {
     opacity: 1;
 }
 
+
+.products-list .wrapper {
+    position: relative;
+    box-sizing: border-box;
+}
+
+
+.products-list .wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #46A358;
+    opacity: 0;
+    transition: opacity .2s ease;
+    z-index: 5;
+}
+
+
+.products-list li:hover .wrapper::before {
+    opacity: 1;
+}
 
 .wrapper {
     position: relative;
@@ -513,10 +575,8 @@ body {
 }
 
 .products-list li {
-    float: left;
     width: 250px;
     height: 350px;
-    margin: 0 15px 70px 15px;
     justify-content: center;
 }
 
@@ -538,7 +598,6 @@ body {
 .products::after {
     content: "";
     display: flex;
-    clear: both;
 }
 
 
@@ -905,6 +964,11 @@ body {
 }
 
 
+.footer-bar-link:hover {
+    color: red;
+    font-weight: 600;
+}
+
 .footer-bottom {
     background: #FBFBFB;
     border-top: 1px solid rgba(70, 163, 88, .2);
@@ -952,6 +1016,11 @@ body {
     color: #3D3D3D;
 }
 
+.footer-list a:hover {
+    color: #46A358;
+    font-weight: 500;
+}
+
 .social {
     list-style: none;
     margin: 20px 34px 33px 25px;
@@ -961,11 +1030,17 @@ body {
 }
 
 .social svg {
+    color: #46A358;
     width: 30px;
     height: 30px;
     display: block;
+    cursor: pointer;
 }
 
+.social :hover svg {
+    color: red;
+    transform: rotate(8deg) scale(1.1);
+}
 
 .payments {
     margin-left: 25px;
