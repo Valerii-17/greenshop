@@ -4,14 +4,52 @@
     padding: 0;
 }
 
-{
-    box-sizing: border-box
-;
-    margin: 0
-;
-    padding: 0
-;
+body {
+    font-family: 'Cera Pro', sans-serif;
 }
+
+.preloader {
+    position: fixed;
+    inset: 0;
+    background: rgba(142, 124, 124, 0.39);
+    z-index: 1;
+
+    &.hidden {
+        display: none;
+    }
+}
+
+.preloader::after {
+    position: absolute;
+    top: 0;
+    bottom: 4%;
+    right: 0;
+    left: 0;
+    content: " ";
+    display: block;
+    margin: auto;
+    height: 32px;
+    width: 32px;
+    box-sizing: border-box;
+    border: solid;
+    border-width: 4px;
+    border-radius: 50%;
+    border-top-color: #46A358;
+    border-bottom-color: #a0efd2;
+    border-right-color: #a0efd2;
+    border-left-color: #a0efd2;
+    animation: rotating 1.1s linear infinite;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 
 h1 {
 
@@ -19,6 +57,7 @@ h1 {
     font-size: 20px;
     line-height: 1.2;
     margin-bottom: 40px;
+    margin-top: 52px;
 
 
 }
@@ -40,9 +79,11 @@ input, textarea {
     border: 1px solid #EAEAEA;
     border-radius: 5px;
 
-    &::placeholder {
-        color: #A5A5A5;
-    }
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #A5A5A5;
 }
 
 section {
@@ -93,6 +134,13 @@ form {
     background: url("https://snipp.ru/demo/495/view.svg") no-repeat center;
 }
 
+.reg-button {
+    background: #46A358;
+    color: #fff;
+    margin-bottom: 36px;
+    cursor: pointer;
+}
+
 .divider {
     margin-bottom: 0;
     display: flex;
@@ -131,6 +179,7 @@ form {
     text-align: center;
     margin-top: 27px;
     margin-bottom: 0;
+    cursor: pointer;
 }
 
 .facebook-btn {
@@ -144,6 +193,7 @@ form {
     text-align: center;
     margin-top: 15px;
     padding: 11px 9px;
+    cursor: pointer;
 }
 
 .social-buttons {
@@ -175,3 +225,77 @@ form {
     width: 20px;
     height: 20px;
 }
+
+
+#terms {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.checkbox-wrapper .checkbox {
+    --bg: #fff;
+    --brdr: #d1d6ee;
+    --brdr-actv: #1e2235;
+    --brdr-hovr: #bbc1e1;
+    --dur: calc((var(--size, 2) / 2) * 0.6s);
+
+    display: inline-block;
+    width: calc(var(--size, 1) * 22px);
+    height: calc(var(--size, 1) * 22px);
+    position: relative;
+
+    cursor: pointer;
+    background-color: var(--bg);
+    border-radius: calc(var(--size, 1) * 4px);
+    border: 1px solid var(--brdr);
+    transition: border-color 180ms ease;
+}
+
+.checkbox-wrapper .checkbox:hover {
+    border-color: var(--brdr-hovr);
+}
+
+
+#terms:checked ~ .checkbox {
+    border-color: var(--brdr-actv);
+}
+
+.checkbox-wrapper .checkbox svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    fill: none;
+    pointer-events: none;
+    stroke: currentColor;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    stroke-dasharray: var(--dashArray, 93);
+    stroke-dashoffset: var(--dashOffset, 94);
+    transition: stroke-dasharray var(--dur), stroke-dashoffset var(--dur);
+}
+
+
+#terms:checked ~ .checkbox svg {
+    --dashArray: 16 93;
+    --dashOffset: 109;
+}
+
+
+
+
+
