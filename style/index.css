@@ -1032,7 +1032,7 @@ body {
 .footer-list a:hover {
     color: #46A358;
     font-weight: 500;
-    transition: 0.2s;
+    transition: 0.3s ease;
 }
 
 .social {
