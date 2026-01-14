@@ -645,9 +645,8 @@ body {
 
 .pagination {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     gap: 10px;
-    margin-right: auto;
     margin-top: 90px;
 }
 
@@ -1174,6 +1173,12 @@ body {
     .section-2{
         grid-template-columns: auto 1fr auto;
     }
+    .pagination{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
 
 }
 
@@ -1208,10 +1213,10 @@ body {
         text-align: center;
         align-items: center;
     }
-    .pagination{
-        justify-content: center;
-        align-items: center;
-    }
+    /*.pagination {*/
+    /*    justify-content: center;*/
+    /*    align-items: center;*/
+    /*}*/
 
     .plants-item:not(:last-child) {
         border: none;
