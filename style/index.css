@@ -672,6 +672,7 @@ body {
 
 .promo-item {
     max-width: 586px;
+    width: auto;
     height: 302px;
     background: #FBFBFB;
 
@@ -1147,7 +1148,13 @@ body {
     .footer-bottom-inner {
         flex-direction: column;
     }
-
+    .section-2 {
+        gap: 20px;
+    }
+    .header-icons{
+        margin-left: auto;
+        margin-right: 0;
+    }
     .footer-right {
         justify-self: center;
         align-items: center;
@@ -1164,8 +1171,11 @@ body {
     .plants-item {
         display: flex;
         flex-direction: column;
-        /*justify-content: center;*/
         text-align: center;
+        align-items: center;
+    }
+    .pagination{
+        justify-content: center;
         align-items: center;
     }
 
@@ -1268,4 +1278,9 @@ body {
         text-align: left;
     }
 
+}
+@media screen and (max-width: 425px) {
+    .section-1{
+        display: none;
+    }
 }
