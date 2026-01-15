@@ -1134,6 +1134,9 @@ body {
     .blog {
         padding: 0 8px;
     }
+    .promo-text {
+        padding: 0 8px;
+    }
 }
 
 @media screen and (max-width: 992px) {
